@@ -40,7 +40,7 @@ class Forms extends React.Component {
           </h2>
           <input type="submit" label="Submit" />
         </form>
-        <textarea value={"A random value"} />
+        {/* <textarea value={"A random value"} /> */}
         <br />
         <label>
           <input
@@ -50,6 +50,14 @@ class Forms extends React.Component {
             onChange={this.handleChange}
           />{" "}
           Is Friendly?
+        </label>
+        <br />
+        <label>
+          <input type="radio" name="gender" value="female" /> Female
+        </label>
+        <br />
+        <label>
+          <input type="radio" name="gender" value="male" /> Male
         </label>
       </>
     );
