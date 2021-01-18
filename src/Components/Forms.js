@@ -87,6 +87,8 @@ class Forms extends React.Component {
             {this.state.firstName} {this.state.lastName}
           </h2>
           <h3>You are a : {this.state.gender}</h3>
+          <h3>Your favorite color is: {this.state.faveColor}</h3>
+          <button>Submit</button>
         </form>
       </>
     );
