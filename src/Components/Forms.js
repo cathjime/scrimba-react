@@ -7,7 +7,7 @@ class Forms extends React.Component {
 
   handleChange = (e) => {
     this.setState({
-      firstName: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
   render() {
@@ -17,10 +17,21 @@ class Forms extends React.Component {
         <form>
           <input
             type="text"
+            name="firstName"
+            value={this.state.firstName}
             placeholder="First Name"
             onChange={this.handleChange}
           />
-          <h2>{this.state.firstName}</h2>
+          <input
+            type="text"
+            name="lastName"
+            value={this.state.lastName}
+            placeholder="Last Name"
+            onChange={this.handleChange}
+          />
+          <h2>
+            {this.state.firstName} {this.state.lastName}
+          </h2>
           <input type="submit" label="Submit" />
         </form>
       </>
