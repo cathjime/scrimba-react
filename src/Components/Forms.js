@@ -3,12 +3,18 @@ import React from "react";
 class Forms extends React.Component {
   state = {
     firstName: "",
+    lastName: "",
+    isFriendly: false,
   };
 
   handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
+    e.target.type === "checkbox"
+      ? this.setState({
+          [e.target.name]: e.target.checked,
+        })
+      : this.setState({
+          [e.target.name]: e.target.value,
+        });
   };
   render() {
     return (
@@ -34,6 +40,17 @@ class Forms extends React.Component {
           </h2>
           <input type="submit" label="Submit" />
         </form>
+        <textarea value={"A random value"} />
+        <br />
+        <label>
+          <input
+            type="checkbox"
+            name="isFriendly"
+            checked={this.state.isFriendly}
+            onChange={this.handleChange}
+          />{" "}
+          Is Friendly?
+        </label>
       </>
     );
   }
