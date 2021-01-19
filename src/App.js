@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Forms from './Components/Forms'
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import FormContainer from  "./Containers/FormContainer";
 
 function App() {
   return (
     <>
-    <Forms /> 
+      <FormContainer />
     </>
   );
 }
