@@ -8,26 +8,26 @@ function Forms(props) {
         <input
           type="text"
           name="firstName"
-          value={this.state.firstName}
+          value={props.data.firstName}
           placeholder="First Name"
-          onChange={this.handleChange}
+          onChange={props.handleChange}
         />
         <input
           type="text"
           name="lastName"
-          value={this.state.lastName}
+          value={props.data.lastName}
           placeholder="Last Name"
-          onChange={this.handleChange}
+          onChange={props.handleChange}
         />
 
-        <textarea value={"A random value"} onChange={this.handleChange} />
+        <textarea value={"A random value"} onChange={props.handleChange} />
         <br />
         <label>
           <input
             type="checkbox"
             name="isFriendly"
-            checked={this.state.isFriendly}
-            onChange={this.handleChange}
+            checked={props.data.isFriendly}
+            onChange={props.handleChange}
           />{" "}
           Is Friendly?
         </label>
@@ -37,8 +37,8 @@ function Forms(props) {
             type="radio"
             name="gender"
             value="female"
-            checked={this.state.gender === "female"}
-            onChange={this.handleChange}
+            checked={props.data.gender === "female"}
+            onChange={props.handleChange}
           />{" "}
           Female
         </label>
@@ -48,16 +48,16 @@ function Forms(props) {
             type="radio"
             name="gender"
             value="male"
-            checked={this.state.gender === "male"}
-            onChange={this.handleChange}
+            checked={props.data.gender === "male"}
+            onChange={props.handleChange}
           />{" "}
           Male
         </label>
         <br />
         <label>Favorite Color</label>
         <select
-          value={this.state.faveColor}
-          onChange={this.handleChange}
+          value={props.data.faveColor}
+          onChange={props.handleChange}
           name="faveColor"
         >
           <option value="dusty rose">Dusty Rose</option>
@@ -66,10 +66,10 @@ function Forms(props) {
         </select>
 
         <h2>
-          {this.state.firstName} {this.state.lastName}
+          {props.data.firstName} {props.data.lastName}
         </h2>
-        <h3>You are a : {this.state.gender}</h3>
-        <h3>Your favorite color is: {this.state.faveColor}</h3>
+        <h3>You are a : {props.data.gender}</h3>
+        <h3>Your favorite color is: {props.data.faveColor}</h3>
         <button>Submit</button>
       </form>
     </>

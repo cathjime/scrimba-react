@@ -23,7 +23,7 @@ class FormContainer extends React.Component {
     return (
       <>
         <h2>This is the Form Container component</h2>;
-        <Forms />
+        <Forms handleChange={this.handleChange} data={this.state} />
       </>
     );
   }
